@@ -1,29 +1,41 @@
-﻿using DTD.Calculator.Core.Operations;
+﻿
 
-namespace DTD.Calculator.Core.Factory
+using System.Collections.Generic;
+using DTD.Calculator.Core.Operations;
+
+namespace DTD.Calculator.Core
 {
-    public class OperationFactory<T>
+    public class OperationFactory<T>where T:IOperatorOverLoaded
     {
-        public enum Operators
+        private static OperationFactory<T> _instance;
+
+        public static OperationFactory<T> Instance => _instance ?? (_instance = new OperationFactory<T>());
+
+        private OperationFactory()
         {
-            Plus,Minus,Multiplication,Division
+            Operations = new Dictionary<string, IOperation<T>>
+            {
+                {"+", new Addition<T>()},
+                {"-", new Subtraction<T>()},
+                {"/", new Division<T>()},
+                {"*", new Multiplication<T>()}
+            };
         }
 
-        public virtual IOperation<T> GetOperation(Operators _operator)
+
+        private Dictionary<string,IOperation<T>> Operations { get; set; }
+
+
+        public IOperation<T> GetOperation(string operation)
         {
-            switch (_operator)
-            {
-                case Operators.Plus:
-                    return new Addition<T>();
-                case Operators.Minus:
-                    return new Subtraction<T>();
-                case Operators.Multiplication:
-                    return new Multiplication<T>();
-                case Operators.Division:
-                    return new Division<T>();
-                default:
-                    return null;
-            }
+            return Operations[operation];
+        }
+
+        public bool RegisterOperation(string key,IOperation<T> operation)
+        {
+            if (Operations[key] != null) return false;
+            Operations.Add(key,operation);
+            return true;
         }
 
 
