@@ -49,10 +49,6 @@ namespace DTD.Calculator.Core
             return returnData;
         }
 
-        public static bool Equals(ComplexNumber a, ComplexNumber b)
-        {
-            return (a.RealPart == b.RealPart && a.ImaginaryPart == b.ImaginaryPart ? true : false);
-        }
 
 
     }
