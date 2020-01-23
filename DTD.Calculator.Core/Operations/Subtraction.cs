@@ -1,5 +1,5 @@
 ﻿
-namespace DTD.Calculator.Core.Operations
+namespace DTD.Calculator.Core
 {
     internal class Subtraction<T> : IOperation<T>
     {

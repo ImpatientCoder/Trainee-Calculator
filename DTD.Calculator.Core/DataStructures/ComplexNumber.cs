@@ -2,7 +2,7 @@
 
 using System;
 
-namespace DTD.Calculator.Core.DataStructures
+namespace DTD.Calculator.Core
 {
     public struct ComplexNumber:IOperatorOverLoaded
     {

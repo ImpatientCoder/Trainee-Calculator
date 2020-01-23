@@ -1,7 +1,9 @@
-﻿namespace DTD.Calculator.Core
+﻿
+
+namespace DTD.Calculator.Core
 {
     public interface IOperation<T>
     {
-        T Operate(T left,T right);
+        T Operate(T left, T right);
     }
 }

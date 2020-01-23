@@ -1,7 +1,10 @@
-﻿namespace DTD.Calculator.Core
+﻿
+
+namespace DTD.Calculator.Core
 {
     public interface IOperatorOverLoaded
     {
         void PlsOverLoad();
+
     }
 }
