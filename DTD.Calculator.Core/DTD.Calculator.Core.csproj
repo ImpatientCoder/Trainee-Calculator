@@ -44,6 +44,7 @@
     <Compile Include="Interfaces\IOperation.cs" />
     <Compile Include="Interfaces\IOperatorOverLoaded.cs" />
     <Compile Include="Operations\Addition.cs" />
+    <Compile Include="Operations\Division.cs" />
     <Compile Include="Operations\Subtraction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

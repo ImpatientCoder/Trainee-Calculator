@@ -1,4 +1,4 @@
-﻿namespace DTD.Calculator.Core.Interfaces
+﻿namespace DTD.Calculator.Core
 {
     public interface IOperation<T>
     {
