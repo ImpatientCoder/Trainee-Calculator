@@ -41,12 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IOperation.cs" />
+    <Compile Include="Interfaces\IOperatorOverLoaded.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataStructures\" />
     <Folder Include="Factory\" />
-    <Folder Include="Interfaces\" />
     <Folder Include="Operations\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
