@@ -41,13 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataStructures\ComplexNumber.cs" />
+    <Compile Include="DataStructures\RealNumber.cs" />
     <Compile Include="Interfaces\IOperation.cs" />
     <Compile Include="Interfaces\IOperatorOverLoaded.cs" />
     <Compile Include="Operations\Addition.cs" />
+    <Compile Include="Operations\Division.cs" />
+    <Compile Include="Operations\Multiplication.cs" />
+    <Compile Include="Operations\Subtraction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DataStructures\" />
     <Folder Include="Factory\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
