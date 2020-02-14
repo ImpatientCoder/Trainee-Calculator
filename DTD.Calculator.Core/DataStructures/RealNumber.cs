@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DTD.Calculator.Core
 {
@@ -37,17 +33,22 @@ namespace DTD.Calculator.Core
            
         }
 
-        public static bool Equals(RealNumber a, RealNumber b)
-        {
-            return (a.Value == b.Value ? true : false);
-        }
 
         public void PlsOverLoad()
         {
             throw new NotImplementedException();
         }
 
+        public override bool Equals(object b)
+        {
+            RealNumber realNumber = (RealNumber) b;
+            return this.Value == realNumber.Value;
+        }
 
+        public static bool IsEquals(RealNumber a,RealNumber b)
+        {
+            return a.Value == b.Value;
+        }
 
     }
 }
